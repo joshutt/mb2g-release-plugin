@@ -36,6 +36,10 @@ jobs:
                       - ~/.m2
                   key: v1-dependencies-{{ checksum "pom.xml" }}
 
+            - add_ssh_keys:
+                  fingerprints:
+                      - "54:04:25:e9:2f:6e:66:de:0d:b2:49:12:1c:bc:af:c2"
+
             - run: git config user.email "josh.utterback@gmail.com"
             - run: git config user.name "Via CircleCI build"
             # run tests!
